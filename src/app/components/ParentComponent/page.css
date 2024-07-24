@@ -1,0 +1,140 @@
+/* 
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+  }
+  
+  input[type="text"],
+  input[type="number"] {
+    width: 200px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  .submitted-payslips {
+    margin-top: 20px;
+    width: 80%;
+  }
+  
+  .submitted-payslips ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .submitted-payslips li {
+    background-color: #e7f3fe;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-left: 5px solid #2196F3;
+    border-radius: 4px;
+  }
+   */
+
+   .header {
+    font-size: 30px;
+    color: #2196F3;
+   }
+
+   .label {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+   }
+
+   .form-ele {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+   }
+
+   button {
+    display: block;
+   }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+  width: 300px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.submitted-payslips {
+  margin-top: 20px;
+  width: 80%;
+}
+
+.submitted-payslips ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.submitted-payslips li {
+  background-color: #e7f3fe;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-left: 5px solid #2196F3;
+  border-radius: 4px;
+}
