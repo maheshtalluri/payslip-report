@@ -1,208 +1,3 @@
-// import React from 'react';
-// import PayslipForm from '../PayslipForm/page';
-
-
-// const ParentComponent = () => {
-//   const handleFormSubmit = (formData: FormData) => {
-//     console.log('Form data submitted:', formData);
-//     // Perform further actions, such as sending the data to a server or generating a payslip
-//   };
-
-//   return (
-//     <div>
-//       <h1>Payslip Generator</h1>
-//       <PayslipForm onSubmit={handleFormSubmit} />
-//     </div>
-//   );
-// };
-
-// export default ParentComponent;
-
-// 'use client';
-// import React from 'react';
-// import { useState } from 'react';
-
-// // Define the FormData interface
-// interface FormData {
-//   name: string;
-//   position: string;
-//   salary: string;
-//   month: string;
-// }
-
-// // PayslipForm component
-// const PayslipForm = ({ onSubmit }: { onSubmit: (formData: FormData) => void }) => {
-//   const [formData, setFormData] = useState<FormData>({
-//     name: '',
-//     position: '',
-//     salary: '',
-//     month: '',
-//   });
-
-//   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-//     const { name, value } = e.target;
-//     setFormData({ ...formData, [name]: value });
-//   };
-
-//   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-//     e.preventDefault();
-//     onSubmit(formData);
-//   };
-
-//   return (
-//     <form onSubmit={handleSubmit}>
-//       <input
-//         type="text"
-//         name="name"
-//         placeholder="Employee Name"
-//         value={formData.name}
-//         onChange={handleChange}
-//         required
-//       />
-//       <input
-//         type="text"
-//         name="position"
-//         placeholder="Position"
-//         value={formData.position}
-//         onChange={handleChange}
-//         required
-//       />
-//       <input
-//         type="number"
-//         name="salary"
-//         placeholder="Monthly Salary"
-//         value={formData.salary}
-//         onChange={handleChange}
-//         required
-//       />
-//       <input
-//         type="text"
-//         name="month"
-//         placeholder="Month"
-//         value={formData.month}
-//         onChange={handleChange}
-//         required
-//       />
-//       <button type="submit">Generate Payslip</button>
-//     </form>
-//   );
-// };
-
-// // Parent component
-// const ParentComponent =  () => {
-//   const handleFormSubmit = (formData: FormData) => {
-//     console.log('Form data submitted:', formData);
-
-//   };
-
-//   return (
-//     <div>
-//       <h1>Payslip Generator</h1>
-//       <PayslipForm onSubmit={handleFormSubmit} />
-//       <h1>Mahesh</h1>
-//     </div>
-//   );
-// };
-
-// export default ParentComponent;
-
-// 'use client';
-// import React, { useState } from 'react';
-// import './page.css'
-
-// // Define the FormData interface
-// interface FormData {
-//   name: string;
-//   position: string;
-//   salary: string;
-//   month: string;
-// }
-
-// // PayslipForm component
-// const PayslipForm = ({ onSubmit }: { onSubmit: (formData: FormData) => void }) => {
-//   const [formData, setFormData] = useState<FormData>({
-//     name: '',
-//     position: '',
-//     salary: '',
-//     month: '',
-//   });
-
-//   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-//     const { name, value } = e.target;
-//     setFormData({ ...formData, [name]: value });
-//   };
-
-//   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-//     e.preventDefault();
-//     onSubmit(formData);
-//   };
-
-//   return (
-//     <form onSubmit={handleSubmit}>
-//       <input
-//         type="text"
-//         name="name"
-//         placeholder="Employee Name"
-//         value={formData.name}
-//         onChange={handleChange}
-//         required
-//       />
-//       <input
-//         type="text"
-//         name="position"
-//         placeholder="Position"
-//         value={formData.position}
-//         onChange={handleChange}
-//         required
-//       />
-//       <input
-//         type="number"
-//         name="salary"
-//         placeholder="Monthly Salary"
-//         value={formData.salary}
-//         onChange={handleChange}
-//         required
-//       />
-//       <input
-//         type="text"
-//         name="month"
-//         placeholder="Month"
-//         value={formData.month}
-//         onChange={handleChange}
-//         required
-//       />
-//       <button type="submit">Generate Payslip</button>
-//     </form>
-//   );
-// };
-
-// // Parent component
-// const ParentComponent = () => {
-//   const [submittedData, setSubmittedData] = useState<FormData[]>([]);
-
-//   const handleFormSubmit = (formData: FormData) => {
-//     setSubmittedData([...submittedData, formData]);
-//   };
-
-//   return (
-//     <div>
-//       <h1>Payslip Generator</h1>
-//       <PayslipForm onSubmit={handleFormSubmit} />
-//       <h2>Submitted Payslips</h2>
-//       <ul>
-//         {submittedData.map((data, index) => (
-//           <li key={index}>
-//             <strong>Name:</strong> {data.name}, <strong>Position:</strong> {data.position}, <strong>Salary:</strong> {data.salary}, <strong>Month:</strong> {data.month}
-//           </li>
-//         ))}
-//       </ul>
-//     </div>
-//   );
-// };
-
-// export default ParentComponent;
-
-// 
 'use client';
 import React, { useState } from 'react';
 import './page.css'
@@ -214,8 +9,6 @@ interface FormData {
   salary: string;
   month: string;
   department: string;
-  dateOfJoining: string;
-  address: string;
   employeeId: string;
   bankAccount: string;
   taxDeductions: string;
@@ -229,8 +22,6 @@ const PayslipForm = ({ onSubmit }: { onSubmit: (formData: FormData) => void }) =
     salary: '',
     month: '',
     department: '',
-    dateOfJoining: '',
-    address: '',
     employeeId: '',
     bankAccount: '',
     taxDeductions: '',
@@ -247,7 +38,8 @@ const PayslipForm = ({ onSubmit }: { onSubmit: (formData: FormData) => void }) =
   };
 
   return (
-    <form onSubmit={handleSubmit} className = "form-ele" >
+    <form onSubmit={handleSubmit}  >
+      <div className = "form-ele" >
       <label className = "label" >
         Employee Name:
         <input
@@ -298,7 +90,7 @@ const PayslipForm = ({ onSubmit }: { onSubmit: (formData: FormData) => void }) =
           required
         />
       </label>
-      <label className = "label" >
+      {/* <label className = "label" >
         Date of Joining:
         <input
           type="date"
@@ -307,8 +99,8 @@ const PayslipForm = ({ onSubmit }: { onSubmit: (formData: FormData) => void }) =
           onChange={handleChange}
           required
         />
-      </label>
-      <label className = "label" >
+      </label> */}
+      {/* <label className = "label" >
         Address:
         <input
           type="text"
@@ -317,7 +109,7 @@ const PayslipForm = ({ onSubmit }: { onSubmit: (formData: FormData) => void }) =
           onChange={handleChange}
           required
         />
-      </label>
+      </label> */}
       <label className = "label" >
         Employee ID:
         <input
@@ -348,8 +140,13 @@ const PayslipForm = ({ onSubmit }: { onSubmit: (formData: FormData) => void }) =
           required
         />
       </label>
-      
+      </div>
+
+      <div>
       <button type="submit">Generate Payslip</button>
+      </div>
+
+      
     
     </form>
   );
